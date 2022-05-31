@@ -25,6 +25,7 @@ preload_apps () {
         	if [ -f "${APP_PRELOADER}" ] && [ -x "${APP_PRELOADER}" ]; then
                 	bbplain "Preloading Apps of the given Target: ${GARAGE_TARGET_NAME}-${target_version}"
 
+			DOCKER_STORE_PATH="${OTA_SYSROOT}/ostree/deploy/${OSTREE_OSNAME}/var/lib/docker" \
                 	REGISTRY_SECRETS_FILE="${APP_PRELOAD_REGISTRY_SECRETS_FILE}" \
                 	TARGET_JSON_FILE="${OTA_SYSROOT}/ostree/deploy/${OSTREE_OSNAME}/var/sota/import/installed_versions" \
                 	APP_SHORTLIST="${APP_SHORTLIST}" \
