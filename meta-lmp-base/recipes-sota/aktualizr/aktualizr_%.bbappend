@@ -61,6 +61,7 @@ FILES:${PN}-get = "${bindir}/${PN}-get"
 FILES:${PN}-lite = " \
                     ${bindir}/${PN}-lite \
                     ${nonarch_libdir}/tmpfiles.d/${PN}-lite.conf \
+                    ${bindir}/fioapp \
                     "
 FILES:${PN}-lite-lib = "${nonarch_libdir}/lib${PN}_lite.so"
 FILES:${PN}-lite-dev = "${includedir}/${PN}-lite"
