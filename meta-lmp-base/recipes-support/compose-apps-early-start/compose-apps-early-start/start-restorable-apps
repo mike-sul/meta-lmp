@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+default_apps_path="/var/lmp/default-apps"
+shortlist=""
+
+if [ -f $default_apps_path ] ; then
+        for app in `cat $default_apps_path`; do
+                shortlist+="${app},"
+        done
+        shortlist=${shortlist::-1}
+fi
+
+fioapp run --factory "${FACTORY}" --apps "${shortlist}"

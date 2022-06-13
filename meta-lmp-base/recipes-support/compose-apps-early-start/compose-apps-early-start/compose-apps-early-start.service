@@ -10,7 +10,7 @@ ConditionPathExists=!/var/sota/sql.db
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStart=/usr/bin/compose-apps-early-start
+ExecStart=/usr/bin/start-apps
 Restart=on-failure
 
 [Install]

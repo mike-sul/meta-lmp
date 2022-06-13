@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ -d /var/sota/reset-apps ] ; then
+	start-restorable-apps
+else
+	compose-apps-early-start
+fi
